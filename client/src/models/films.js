@@ -15,11 +15,11 @@ var Films = function(){
     author: "Val"
   });
 
-  var review3 = new Review({
-    comment: "Star Wars is great",
-    rating: 100,
-    author: "Rob"
-  });
+  // var review3 = new Review({
+  //   comment: "Star Wars is great",
+  //   rating: 100,
+  //   author: "Rob"
+  // });
 
   var film1 = new Film({
     title: "Now You See Me",
@@ -33,7 +33,7 @@ var Films = function(){
 
   film1.addReview(review1);
   film2.addReview(review2);
-  film1.addReview(review3);
+  // film1.addReview(review3);
 
   return [film1, film2];
 }

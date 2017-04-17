@@ -1,4 +1,5 @@
 // Routes for films Resource
+var Film = require("../client/src/models/film.js")
 var films = require("../client/src/models/films.js")();
 var express = require("express");
 var filmRouter = new express.Router();
@@ -23,7 +24,8 @@ filmRouter.put("/:id", function(req, res){
 
 // CREATE
 filmRouter.post("/", function(req, res){
-  films.push(req.body.film)
+  var newFilm = new Film(req.body);
+  films.push(newFilm);
   res.json(films);
 })
 
